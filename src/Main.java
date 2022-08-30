@@ -1,54 +1,135 @@
+/* 
 public class Main {
     public static void main(String[] args) {
+
+        Coche coche = new Coche();
+        coche.matricula = "abcde 254";
+        coche.velocidadMaxima = 20;
+        coche.setSonido("rummmm");
+         System.out.println(coche.getsonido());
+
+       /*  CocheElectrico cocheele = new CocheElectrico();
+        cocheele.matricula = "xcva 263";
+        cocheele.velocidadMaxima = 20;
+        System.out.println(cocheele.compruebamatricula(
+            "cxdz"
+        )); */
+        /*Vehiculo avion = new Vehiculo();
+        avion.setTipo("volador");
+
+        avion.setSonido("fuuuuummm");
+       */
+/*    }
+} */
+/* 
+abstract  class Vehiculo { 
+    String matricula;
+    int velocidadMaxima;
+    public String sonido;
+
     
-    int numeroIf  = 5;
-
-    if (numeroIf > 0) {
-        System.out.println(numeroIf);
-    } else if (numeroIf < 0) {
-        System.out.println(numeroIf);
-    } else if (numeroIf == 0) {
-        System.out.println(numeroIf);
+   public boolean compruebamatricula ( String matricula) {
+    if (matricula == "xxx") {
+        return true;
     }
-  
-    int  numeroWhile = 3;
-    while ( numeroWhile < 3) {
-        numeroWhile =  numeroWhile + 1;
-        System.out.println( numeroWhile);
+    return false;
+   }
+
+   public Vehiculo () {
+    System.out.println("constructor");
+   }
+abstract public void setSonido (String sonido);
+  abstract public String getsonido ();
+}
+
+class Coche extends Vehiculo {
+     public void setSonido (String sonido) {
+        this.sonido = sonido;
+    }
+     public String getsonido () {
+        return this.sonido;
+    }
+}
+class CocheElectrico extends Coche {} 
+*/
+/*class Vehiculo { 
+    private String tipo;
+    private int velocidadMaxima;
+    private String sonido;
+
+    
+    public void setSonido (String sonido){
+        this.sonido = sonido;
+    }
+    public String getsonido ()  {
+        return this.sonido;
+     }
+
+    public void setVelocidadMaxima (int velocidadMaxima){
+        this.velocidadMaxima = velocidadMaxima;
+    }
+    public int getVelocidadMaxima() {
+        return this.velocidadMaxima;
     }
 
-
-    int  numberoDoWhile = 3;
-    do {
-        numberoDoWhile = numberoDoWhile + 1;
-    }  while (numberoDoWhile < 4);
-
-    for (int numeroFor = 0; numeroFor <=3; numeroFor = numeroFor + 1) {
-        System.out.println(numeroFor);
+    public void setTipo (String tipo) {
+        this.tipo = tipo; 
     }
-
-    int values[] = new int [5];
-
-    for (int i = 0; i < values.length; i++ ) {
-        System.out.println(values);
+    public String getTipo () {
+        return this.tipo;
     }
-    var estacion = "otoño";
-    switch (estacion) {
-        case "invierno":
-            
-            break;
-        case "verano":
-            
-            break;
-        case "otoño":
-        System.out.println("es: otoño" );
-            break;
-        default:
-        System.out.println("La contamincacion ambientas acabo con las estaciones" );
-            break;
-    }
+}
+*/
+
+public class Main {
+    public static void main(String[] args) {
+
+        Coche coche = new Coche();
+        coche.matricula = "abcde 254";
+        coche.velocidadMaxima = 20;
+        coche.setSonido("rummmm");
+         System.out.println(coche.getsonido());
+
+       /*  CocheElectrico cocheele = new CocheElectrico();
+        cocheele.matricula = "xcva 263";
+        cocheele.velocidadMaxima = 20;
+        System.out.println(cocheele.compruebamatricula(
+            "cxdz"
+        )); */
+        /*Vehiculo avion = new Vehiculo();
+        avion.setTipo("volador");
+
+        avion.setSonido("fuuuuummm");
+       */
     }
 }
 
+abstract  class Vehiculo { 
+    String matricula;
+    int velocidadMaxima;
+    public String sonido;
 
+    
+   public boolean compruebamatricula ( String matricula) {
+    if (matricula == "xxx") {
+        return true;
+    }
+    return false;
+   }
 
+   public Vehiculo () {
+    System.out.println("constructor");
+   }
+abstract public void setSonido (String sonido);
+  abstract public String getsonido ();
+}
+
+class Coche extends Vehiculo {
+     public void setSonido (String sonido) {
+        this.sonido = sonido;
+    }
+     public String getsonido () {
+        return this.sonido;
+    }
+}
+class CocheElectrico extends Coche {}
